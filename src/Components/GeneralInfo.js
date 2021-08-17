@@ -5,6 +5,7 @@ import { InputBox, LabelBox } from './element';
 class GeneralInfo extends Component {
     constructor(props) {
         super(props);
+        
     }
 
     render() {
@@ -17,8 +18,8 @@ class GeneralInfo extends Component {
                 <InputBox name = "cv_email" type = "email"/><br/>
                 <LabelBox name = "cv_number" labelInfo = "Mobile Number" />
                 <InputBox name = "cv_number"/><br/>
-                <LabelBox name = "cv_age" labelInfo = "Age" />
-                <InputBox name = "cv_age"/>
+                <LabelBox name = "cv_city" labelInfo = "City" />
+                <InputBox name = "cv_city"/><br/>
             </div>
         )
     }

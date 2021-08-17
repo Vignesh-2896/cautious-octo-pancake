@@ -1,36 +1,28 @@
-import React,{Component} from 'react';
+import React from 'react';
 import GeneralInfo from './GeneralInfo';
 import Education from './Education';
 import Work from './Work';
 
-class MainForm extends Component {
-    constructor(props){
-        super(props)
+
+function MainForm(){
+
+    const divStyle = {
+        width:"60%",
+        margin:"70px auto 0px auto",
+        border:"1px solid black",
+        textAlign:"center",
     }
 
-    render () {
-
-
-        const divStyle = {
-            width:"60%",
-            margin:"70px auto 0px auto",
-            border:"1px solid black",
-            textAlign:"center",
-        }
-
-        return (
-            <div style = {divStyle} >
-                <form>
-                    <GeneralInfo/>
-                    <Education/>
-                    <Work/>
-                </form>
-            </div>
-        )
-    }
+    return (
+        <div style = {divStyle} >
+            <form>
+                <GeneralInfo/>
+                <Education/>
+                <Work/>
+            </form>
+        </div>
+    )
 
 }
 
-
-
-export default MainForm;
+export {MainForm};

@@ -4,12 +4,11 @@ function Footer(){
 
     const divStyle = {
         width:"100%",
-        position:"fixed",
-        left:"0",
-        right:"0",
-        bottom:"0",
+        clear:"both",
         textAlign:"center",
         backgroundColor:"gray",
+        display:"inline-block",
+        marginTop:"50px",
     };
 
     return (
