@@ -1,9 +1,17 @@
-.generalInfo, .education, .work {
+.generalInfo, .education, .work  {
     padding-bottom: 30px;
     border-bottom:1px solid black;
 }
 
 .yearInput {
     width: 20% !important;
-    margin: 5px auto 5px -338px !important;
+    margin: 5px auto 5px -420px !important;
+}
+
+.renderPdf button {
+    width: 20% !important;
+}
+
+.renderPdf a {
+    text-decoration: none;
 }

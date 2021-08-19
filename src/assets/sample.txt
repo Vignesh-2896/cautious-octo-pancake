@@ -1,0 +1,30 @@
+General Info
+Vignesh Baskaran
+vigneshb2896@gmail.com
++91 9790797867
+https://www.linkedin.com/in/vignesh-baskaran-8932b7120/
+http://github.com/Vignesh-2896
+Chennai
+
+Work Experience
+Temenos
+Software Engineer
+2018
+2021
+Developer in Core Banking (T24) specializing in Trade Finance applications.
+
+Work Description
+Fixed over 200 financial bugs raised by clients across various product releases.
+Worked on upto 15 enhancement projects including the integration of SWIFT 2021 standards.
+Debugging and resolving inconsistent errors in the existing codebase.
+Took ownership of understanding the new automation application, and was the point man in the team for all the queries.
+Provided training to two batches of new joinees.
+Routinely helped teammates in suggesting better solutions in bug fixes and product enhancement projects.
+
+Education
+SRM Institute of Science and Technology, Chennai
+B.Tech
+Computer Science and Engineering
+2014
+2018
+9.10

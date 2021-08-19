@@ -24,7 +24,6 @@ class Education extends Component {
         this.setState((state) => {
             return {educationFormList:currentStateValue,}
         });
-        
     }
 
     addForms =  (e) => {
@@ -33,7 +32,6 @@ class Education extends Component {
 
         const divStyle = {
             borderBottom:"1px dotted black",
-            width:"80%",
             marginLeft:"auto",
             marginRight:"auto",
             marginBottom:"5px",
@@ -43,9 +41,11 @@ class Education extends Component {
             <div key = {nextEducationId} data-key = {nextEducationId} className = {`educationForm_${nextEducationId}`} style = {divStyle}>
                 <LabelBox name = {`cv_ins_${nextEducationId}`} labelInfo = "Institution Name" />
                 <InputBox name = {`cv_ins_${nextEducationId}`}/><br/>
+                <LabelBox name = {`cv_degree_${nextEducationId}`} labelInfo = "Degree" />
+                <InputBox name = {`cv_degree_${nextEducationId}`}/><br/>
                 <LabelBox name = {`cv_spcz_${nextEducationId}`} labelInfo = "Specialization" />
-                <InputBox name = {`cv_spcz_${nextEducationId}`} type = "email"/><br/>
-                <LabelBox name = {`cv_years_from_${nextEducationId}`} labelInfo = "Years of Study " />   
+                <InputBox name = {`cv_spcz_${nextEducationId}`}/><br/>
+                <LabelBox name = {`cv_years_from_${nextEducationId}`} labelInfo = "From" />   
                 <InputBox classType = "yearInput" name = {`cv_years_from_${nextEducationId}`} placeholder = "YYYY" changeFunc = {this.validateYears} min = "1900" max = "2021" /><br/>
                 <LabelBox name = {`cv_years_to_${nextEducationId}`} labelInfo = "To" />    
                 <InputBox classType = "yearInput" name = {`cv_years_to_${nextEducationId}`} placeholder = "YYYY" changeFunc = {this.validateYears} /><br/>
@@ -65,6 +65,11 @@ class Education extends Component {
             alert("Please enter a 4 digit numeric value for the year.")
             e.target.value = ""; e.target.focus();
         }
+    }
+
+
+    componentDidMount(){
+        this.addForms();
     }
 
     render() {

@@ -32,7 +32,6 @@ class Work extends Component {
 
         const divStyle = {
             borderBottom:"1px dotted black",
-            width:"80%",
             marginLeft:"auto",
             marginRight:"auto",
             marginBottom:"5px",
@@ -44,12 +43,14 @@ class Work extends Component {
                 <InputBox name = {`wrk_cpy_name_${nextWorkId}`}/><br/>
                 <LabelBox name = {`wrk_designation_${nextWorkId}`} labelInfo = "Designation" />
                 <InputBox name = {`wrk_designation_${nextWorkId}`} /><br/>
-                <LabelBox name = {`wrk_years_from_${nextWorkId}`} labelInfo = "Years Worked" />
+                <LabelBox name = {`wrk_years_from_${nextWorkId}`} labelInfo = "Worked From" />
                 <InputBox classType = "yearInput" name = {`wrk_years_from_${nextWorkId}`} placeholder = "YYYY" changeFunc = {this.validateYears} min = "1900" max = "2021"/><br/>
-                <LabelBox name = {`wrk_years_to_${nextWorkId}`} labelInfo = "Years Worked" />
+                <LabelBox name = {`wrk_years_to_${nextWorkId}`} labelInfo = "To" />
                 <InputBox classType = "yearInput" name = {`wrk_years_to_${nextWorkId}`} placeholder = "YYYY" changeFunc = {this.validateYears} min = "1900" max = "2021"/><br/>
                 <LabelBox name = {`wrk_summary_${nextWorkId}`} labelInfo = "Summary" />
-                <TextAreaBox name = {`wrk_summary_${nextWorkId}`}/>
+                <InputBox name = {`wrk_summary_${nextWorkId}`}/>
+                <LabelBox name = {`wrk_description_${nextWorkId}`} labelInfo = "Description" />
+                <TextAreaBox name = {`wrk_description_${nextWorkId}`}/>
                 <ButtonBox buttonInfo = "Delete" buttonAction = {this.deleteForms} />
             </div>
         );
@@ -64,6 +65,10 @@ class Work extends Component {
             alert("Please enter a 4 digit numeric value for the year.")
             e.target.value = ""; e.target.focus();
         }
+    }
+
+    componentDidMount(){
+        this.addForms();
     }
 
     render() {

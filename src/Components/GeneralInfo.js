@@ -18,6 +18,10 @@ class GeneralInfo extends Component {
                 <InputBox name = "cv_email" type = "email"/><br/>
                 <LabelBox name = "cv_number" labelInfo = "Mobile Number" />
                 <InputBox name = "cv_number"/><br/>
+                <LabelBox name = "cv_linkedin" labelInfo = "Linkedin Profile" />
+                <InputBox name = "cv_linkedin"/><br/>
+                <LabelBox name = "cv_github" labelInfo = "Github Profile" />
+                <InputBox name = "cv_github"/><br/>
                 <LabelBox name = "cv_city" labelInfo = "City" />
                 <InputBox name = "cv_city"/><br/>
             </div>

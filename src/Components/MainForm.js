@@ -2,7 +2,7 @@ import React from 'react';
 import GeneralInfo from './GeneralInfo';
 import Education from './Education';
 import Work from './Work';
-
+import CVActions from './CVActions';
 
 function MainForm(){
 
@@ -15,10 +15,11 @@ function MainForm(){
 
     return (
         <div style = {divStyle} >
-            <form>
+            <form id = "cv_form" >
                 <GeneralInfo/>
-                <Education/>
                 <Work/>
+                <Education/>
+                <CVActions/>
             </form>
         </div>
     )
