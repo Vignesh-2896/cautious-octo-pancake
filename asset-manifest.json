@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/cautious-octo-pancake/static/css/main.ca77715d.chunk.css",
+    "main.js": "/cautious-octo-pancake/static/js/main.a6ee874f.chunk.js",
+    "main.js.map": "/cautious-octo-pancake/static/js/main.a6ee874f.chunk.js.map",
+    "runtime-main.js": "/cautious-octo-pancake/static/js/runtime-main.72b1420e.js",
+    "runtime-main.js.map": "/cautious-octo-pancake/static/js/runtime-main.72b1420e.js.map",
+    "static/js/2.a72cdff2.chunk.js": "/cautious-octo-pancake/static/js/2.a72cdff2.chunk.js",
+    "static/js/2.a72cdff2.chunk.js.map": "/cautious-octo-pancake/static/js/2.a72cdff2.chunk.js.map",
+    "index.html": "/cautious-octo-pancake/index.html",
+    "static/css/main.ca77715d.chunk.css.map": "/cautious-octo-pancake/static/css/main.ca77715d.chunk.css.map",
+    "static/js/2.a72cdff2.chunk.js.LICENSE.txt": "/cautious-octo-pancake/static/js/2.a72cdff2.chunk.js.LICENSE.txt",
+    "static/media/FontsFree-Net-arial-bold.ff542716.ttf": "/cautious-octo-pancake/static/media/FontsFree-Net-arial-bold.ff542716.ttf",
+    "static/media/sample.f8b853ba.txt": "/cautious-octo-pancake/static/media/sample.f8b853ba.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.72b1420e.js",
+    "static/js/2.a72cdff2.chunk.js",
+    "static/css/main.ca77715d.chunk.css",
+    "static/js/main.a6ee874f.chunk.js"
+  ]
+}
