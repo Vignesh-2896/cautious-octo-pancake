@@ -2,18 +2,22 @@ import React from 'react';
 import {Document, Page, View, Text, StyleSheet, Link, Font, Image } from '@react-pdf/renderer';
 import arialBondSrc from "../assets/FontsFree-Net-arial-bold.ttf"
 import bulletPoint from "../assets/icons8-360-degrees-24.png"
+import MailSVG from "../assets/icons8-mail-48.png"
+import LinkedinSVG from "../assets/icons8-linkedin-48.png"
+import GithubSVG from "../assets/icons8-github-48.png"
 
 function RenderPDF(){
 
   Font.register({family:"Arial Bold",src: arialBondSrc}) 
 
   const styles = StyleSheet.create({
-    viewSection:{margin:10,padding:5},
-    page : {margin:5,padding:5,fontSize:"14px"},
-    view : {marginTop:15,padding:5},
+    viewSection:{margin:5,padding:4},
+    page : {margin:5,padding:4,fontSize:"14px"},
+    view : {marginTop:15,padding:4},
     heading: {color:"green",fontSize:"16px"},
     boldOnly:{fontFamily:"Arial Bold"},
-    bullet : {height:"8px"}
+    bullet : {height:"8px"},
+    soMoIcon : {height:"16px",width:"16px"}
   })
 
   let generalInput = Array.from(document.getElementsByClassName("generalInfo")[0].getElementsByTagName("input"));
@@ -25,13 +29,18 @@ function RenderPDF(){
 
 // Fetching and inserting data from General Information Form into Text Boxes.
   let generalSection = [];
-  generalInput.forEach(function(item){
-    if(item.name === "cv_email") generalSection.push(<Text key = {item.name}><Link  style = {{color:"#DB4437"}} src = {`mailto:${item.value}`} >Email</Link></Text>)
-    else if(item.name === "cv_linkedin") generalSection.push(<Text style = {{color:"#0077b5"}} key = {item.name}><Link src = {item.value} >LinkedIn</Link></Text>)
-    else if(item.name === "cv_github") generalSection.push(<Text style = {{color:"#333"}} key = {item.name}><Link src = {item.value} >Github</Link></Text>)
-    else if(item.name === "cv_name") generalSection.push(<Text style = {{fontSize:"24px"}} key = {item.name}><Link src = {item.value} >{item.value}</Link></Text>)
-    else generalSection.push(<Text key = {item.name}>{item.value}</Text>)
-  })
+  generalSection.push(
+    <View>
+      <Text style = {{fontSize:"22px"}} key = {generalInput[0].name}>{generalInput[0].value}</Text>
+      <Text key = {generalInput[2].name}>{generalInput[2].value}</Text>
+      <Text key = {generalInput[3].name}>{generalInput[3].value}</Text>
+      <View style = {{display:"flex",flexDirection:"row"}}>
+        <Link key = {generalInput[1].name} src = {`mailto:${generalInput[1].value}`} ><Image style = {styles.soMoIcon}  src = {MailSVG} /></Link>
+        <Link key = {generalInput[4].name} src = {generalInput[4].value} ><Image style = {styles.soMoIcon} src = {LinkedinSVG} /></Link>
+        <Link key = {generalInput[5].name} src = {generalInput[5].value} ><Image style = {styles.soMoIcon} src = {GithubSVG} /></Link>
+      </View>
+    </View>
+  )
 
 // Fetching and inserting data from Education Information Form into Text Boxes.  
   let educationUnits = [];
@@ -55,7 +64,7 @@ function RenderPDF(){
 
   let tempList = [];
   let textAreaSize = []
-  textAreaInput.forEach(function(item){
+  textAreaInput.forEach(function(item){   // Transforming each line in each textarea box to include a bullet point.
     let textAreaUnits = item.value.split("\n").map((arrItem,index) => <Text key = {`${item.name}_${index}`}><Image style = {styles.bullet} src = {bulletPoint} />{arrItem}</Text>)
     textAreaUnits.forEach(item => tempList.push(item))
     textAreaSize.push(textAreaUnits.length)
@@ -90,7 +99,7 @@ function RenderPDF(){
       <Text>{experienceUnits[i+2]} - {experienceUnits[i+3]}</Text>
       <Text>{experienceUnits[i+4]}</Text>
       {textAreaSection.map(function(item){
-        return <Text style = {{paddingTop:"10px",fontSize:"13px",paddingLeft:"10px"}} >{item}</Text>
+        return <Text style = {{paddingTop:"5px",fontSize:"13px",paddingLeft:"5px"}} >{item}</Text>
       })}
     </View>)
   }
@@ -119,7 +128,6 @@ skillInput.forEach(function(item){
   <Document>
     <Page size = "A4" style = {styles.page}>
       <View style = {styles.view} >
-      <Text style = {styles.heading}></Text>
         {generalSection}
       </View>
       <View style = {styles.view} >

@@ -14,7 +14,7 @@ class CVActions extends Component{
         this.sampleData = this.sampleData.bind(this);
     }
 
-    async sampleData(e){
+    async sampleData(e){            // Function to input sample data into all the fields.
         if (e) e.preventDefault();
         let response = await fetch(Sample);
         response = await response.text();
@@ -22,8 +22,8 @@ class CVActions extends Component{
         let inputList = document.getElementsByTagName("input");
         let textArea = document.getElementsByTagName("textarea");
         let currentInputType = "", inputCtr = 0;
-        for(let i = 0; i< response.length; i++){
-            if(!currentInputType || response[i] === ""){
+        for(let i = 0; i< response.length; i++){        // Iterating with all the sample data.
+            if(!currentInputType || response[i] === ""){    
                 if(response[i] === ""){
                     currentInputType = "";
                     continue;
@@ -31,11 +31,11 @@ class CVActions extends Component{
                 else if(response[i] === "Work Description") currentInputType = "SameBox"
                 else currentInputType = "NextBox"
             } else {
-                if(currentInputType === "NextBox"){
+                if(currentInputType === "NextBox"){ 
                     inputList[inputCtr].value = response[i];
                     inputCtr++ ;
                 } else{
-                    textArea[0].value += response[i] + "\n";
+                    textArea[0].value += response[i] + "\n";    // For the textarea box, multiple lines will be added to same field.
                 }
             }
         }
@@ -45,7 +45,7 @@ class CVActions extends Component{
         textArea[0].value = temp.join("\n");
     }
 
-    clearCV(e){
+    clearCV(e){ // Clear all input fields.
         if (e) e.preventDefault();
         let inputList = document.getElementsByTagName("input")
         for(let i = 0; i < inputList.length; i++) inputList[i].value = "";
@@ -55,7 +55,7 @@ class CVActions extends Component{
         alert("Manually added sections can be removed using their respective Delete buttons.")
     }
 
-    async fetchData(e){
+    async fetchData(e){ // Function to generate PDF based on form inputs.
         if(document.getElementById("cv_form").checkValidity()){
             e.preventDefault();
             let pdfname = document.getElementsByName("cv_name");
