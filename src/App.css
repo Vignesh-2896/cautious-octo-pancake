@@ -1,4 +1,4 @@
-.generalInfo, .education, .work  {
+.generalInfo, .education, .work, .interests, .skills  {
     padding-bottom: 30px;
     border-bottom:1px solid black;
 }
@@ -14,4 +14,22 @@
 
 .renderPdf a {
     text-decoration: none;
+}
+
+div[class^="interestForm_"] input {
+    width: 40% !important;
+    display: inline !important ; 
+}
+
+div[class^="interestForm_"] button {
+    display: inline !important ;
+}
+
+div[class^="skillForm_"] input {
+    width: 40% !important;
+    display: inline !important ; 
+}
+
+div[class^="skillForm_"] button {
+    display: inline !important ;
 }

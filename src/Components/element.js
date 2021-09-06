@@ -8,7 +8,7 @@ function InputBox(props){
         fontSize:"15px",
     }
     return (
-        <input className = {props.classType} name = {props.name} type = {inputType} style = {inputStyle} placeholder = {props.placeholder} onBlur = {props.changeFunc} minLength = {props.min} maxLength = {props.max}  required/>
+        <input className = {props.classType} name = {props.name} type = {inputType} style = {inputStyle} placeholder = {props.placeholder} onBlur = {props.changeFunc} min = {props.min} max = {props.max}  required/>
     )
 }
 

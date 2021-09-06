@@ -2,12 +2,15 @@ General Info
 Vignesh Baskaran
 vigneshb2896@gmail.com
 +91 9790797867
+Chennai
 https://www.linkedin.com/in/vignesh-baskaran-8932b7120/
 http://github.com/Vignesh-2896
-Chennai
+
+Skills
+ReactJS
 
 Work Experience
-Temenos
+Temenos India Pvt Ltd, Chennai
 Software Engineer
 2018
 2021
@@ -28,3 +31,6 @@ Computer Science and Engineering
 2014
 2018
 9.10
+
+Personal Interests
+eSports, F1 and Football

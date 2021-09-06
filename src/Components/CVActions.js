@@ -28,18 +28,21 @@ class CVActions extends Component{
                     currentInputType = "";
                     continue;
                 }
-                else if(response[i] === "General Info") currentInputType = "NextBox"
-                else if(response[i] === "Work Experience") currentInputType = "NextBox"
                 else if(response[i] === "Work Description") currentInputType = "SameBox"
-                else if(response[i] === "Education") currentInputType = "NextBox"
+                else currentInputType = "NextBox"
             } else {
                 if(currentInputType === "NextBox"){
                     inputList[inputCtr].value = response[i];
                     inputCtr++ ;
-                } else  textArea[0].value += response[i] + "\n";
+                } else{
+                    textArea[0].value += response[i] + "\n";
+                }
             }
         }
-    
+
+        let temp = textArea[0].value.split("\n")
+        temp.pop();
+        textArea[0].value = temp.join("\n");
     }
 
     clearCV(e){
@@ -55,7 +58,6 @@ class CVActions extends Component{
     async fetchData(e){
         if(document.getElementById("cv_form").checkValidity()){
             e.preventDefault();
-
             let pdfname = document.getElementsByName("cv_name");
             const newPdf = await pdf(RenderPDF());
             newPdf.updateContainer(RenderPDF())
