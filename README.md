@@ -12,10 +12,12 @@ There are a total of 5 available forms :
 There is an option available in all the above forms except General Info form, to Add or Delete 
 extra sets of forms under the same category i.e. multiple education information, skills or hobbies.
 
-Using states, these forms will be displayed when we add/delete them.
+Using states, these forms will be displayed dynamically when we add/delete fields.
 
 ## Actions
 Three form actions are present.
 1. Clear
 2. Sample Data - This will fetch and insert sample data into all the fields as an example of how data is to be input.
 3. Generate - This will generate a PDF with all our given data.
+
+[Live Demo](https://vignesh-2896.github.io/cautious-octo-pancake/)
