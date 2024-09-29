@@ -1,35 +1,39 @@
-.generalInfo, .education, .work, .interests, .skills  {
-    padding-bottom: 30px;
-    border-bottom:1px solid black;
+.generalInfo,
+.education,
+.work,
+.interests,
+.skills {
+  padding-bottom: 30px;
+  border-bottom: 1px solid black;
 }
 
 .yearInput {
-    width: 20% !important;
-    margin: 5px auto 5px -420px !important;
+  width: 20% !important;
+  margin: 5px auto 5px -420px !important;
 }
 
 .renderPdf button {
-    width: 20% !important;
+  width: 20% !important;
 }
 
 .renderPdf a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 div[class^="interestForm_"] input {
-    width: 40% !important;
-    display: inline !important ; 
+  width: 40% !important;
+  display: inline !important ;
 }
 
 div[class^="interestForm_"] button {
-    display: inline !important ;
+  display: inline !important ;
 }
 
 div[class^="skillForm_"] input {
-    width: 40% !important;
-    display: inline !important ; 
+  width: 40% !important;
+  display: inline !important ;
 }
 
 div[class^="skillForm_"] button {
-    display: inline !important ;
+  display: inline !important ;
 }
